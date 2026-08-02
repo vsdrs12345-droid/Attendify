@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendify - Attendance Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo-area">
+
+        <div class="logo">🎓</div>
+
+        <div>
+            <h1>Attendify</h1>
+            <p>College Attendance Tracker</p>
+        </div>
+
+    </div>
+
+    <button id="resetButton" class="reset-btn">
+        Reset Data
+    </button>
+
+</header>
+
+
+<main>
+
+    <!-- OVERALL ATTENDANCE -->
+
+    <section class="overall-section">
+
+        <div class="overall-content">
+
+            <p class="small-title">
+                OVERALL ATTENDANCE
+            </p>
+
+            <h2 id="overallPercentage">
+                0%
+            </h2>
+
+            <p id="overallClasses">
+                0 / 0 classes
+            </p>
+
+            <div class="overall-progress">
+
+                <div
+                    id="overallProgressBar"
+                    class="overall-progress-bar">
+                </div>
+
+            </div>
+
+            <div
+                id="overallMessage"
+                class="overall-message">
+
+                Add your subjects to calculate attendance
+
+            </div>
+
+        </div>
+
+        <div class="hero-icon">
+            📚
+        </div>
+
+    </section>
+
+
+    <!-- ATTENDANCE TARGET -->
+
+    <section class="target-section">
+
+        <div class="target-info">
+
+            <div class="target-icon">
+                🎯
+            </div>
+
+            <div>
+
+                <h2>Required Attendance</h2>
+
+                <p>
+                    Choose the minimum attendance percentage
+                    you need to maintain.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <select id="targetSelect">
+
+            <option value="65">65%</option>
+            <option value="70">70%</option>
+            <option value="75">75%</option>
+            <option value="80">80%</option>
+            <option value="85">85%</option>
+            <option value="90">90%</option>
+
+        </select>
+
+    </section>
+
+
+    <!-- ADD SUBJECT -->
+
+    <section class="add-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>Add Subject</h2>
+
+                <p>
+                    Enter your current attendance details
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="attendance-form">
+
+            <div class="input-group">
+
+                <label for="subject">
+                    Subject Name
+                </label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Example: COMP">
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="attended">
+                    Classes Attended
+                </label>
+
+                <input
+                    type="number"
+                    id="attended"
+                    placeholder="Example: 32"
+                    min="0">
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="total">
+                    Total Classes
+                </label>
+
+                <input
+                    type="number"
+                    id="total"
+                    placeholder="Example: 40"
+                    min="1">
+
+            </div>
+
+
+            <button
+                id="addButton"
+                class="add-btn">
+
+                + Add Subject
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUBJECTS -->
+
+    <section class="subjects-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>Your Subjects</h2>
+
+                <p id="subjectCount">
+                    0 subjects added
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="emptyState"
+            class="empty-state">
+
+            <div class="empty-icon">
+                📖
+            </div>
+
+            <h3>No subjects yet</h3>
+
+            <p>
+                Add your first subject above to start
+                tracking your attendance.
+            </p>
+
+        </div>
+
+
+        <div
+            id="subjectList"
+            class="subject-grid">
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Attendify • Stay on top of your attendance 🎓
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
